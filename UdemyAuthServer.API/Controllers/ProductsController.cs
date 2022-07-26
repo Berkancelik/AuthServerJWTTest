@@ -42,7 +42,7 @@ namespace UdemyAuthServer.API.Controllers
 
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProducts(int id)
         {
             return ActionResultInstance(await _productService.Remove(id));
